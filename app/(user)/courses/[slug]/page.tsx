@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,6 +19,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
   const course = await getCourseBySlug(slug);
   const { userId } = await auth();
 
+  // eslint-disable-file no-use-before-define
   const isEnrolled =
     userId && course?._id
       ? await isEnrolledInCourse(userId, course._id)
