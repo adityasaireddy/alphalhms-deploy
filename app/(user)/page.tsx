@@ -5,29 +5,6 @@ import About from "@/components/About";
 export default async function Home() {
   const courses = await getCourses();
 
-  const whyuscontent: object = [
-    {
-      title: "Placement support",
-      content:
-        "We provide resume building, mock interviews, coding challenges, and job referrals to help you land your dream job.",
-    },
-    {
-      title: "Learn from Industry Experts",
-      content:
-        "Get trained by experienced professionals who have worked on real-world software projects and understand what companies look for in developers.",
-    },
-    {
-      title: "Hands-on, Project-Based Learning",
-      content:
-        "We focus on practical coding with real-world projects to ensure you gain the experience needed to become job-ready.",
-    },
-    {
-      title: "Industry-Recognized Certification",
-      content:
-        "Earn a verified certification that showcases your expertise and boosts your career prospects.",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <Hero />

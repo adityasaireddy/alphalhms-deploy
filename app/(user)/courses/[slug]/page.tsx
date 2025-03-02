@@ -1,10 +1,12 @@
+/* eslint-disable no-unused-vars */
+
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, BookOpen } from "lucide-react";
 import getCourseBySlug from "@/sanity/lib/courses/getCourseBySlug";
-import { isEnrolledInCourse } from "@/sanity/lib/student/isEnrolledInCourse";
-import { auth } from "@clerk/nextjs/server";
+// import { isEnrolledInCourse } from "@/sanity/lib/student/isEnrolledInCourse";
+// import { auth } from "@clerk/nextjs/server";
 import { Button } from "@/components/ui/button";
 // import EnrollButton from "@/components/EnrollButton";
 
@@ -17,12 +19,12 @@ interface CoursePageProps {
 export default async function CoursePage({ params }: CoursePageProps) {
   const { slug } = await params;
   const course = await getCourseBySlug(slug);
-  const { userId } = await auth();
+  // const { userId } = await auth();
 
-  const isEnrolled =
-    userId && course?._id
-      ? await isEnrolledInCourse(userId, course._id)
-      : false;
+  // const isEnrolled =
+  //   userId && course?._id
+  //     ? await isEnrolledInCourse(userId, course._id)
+  //     : false;
 
   if (!course) {
     return (
