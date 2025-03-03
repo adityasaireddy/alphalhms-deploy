@@ -27,7 +27,7 @@ export default async function SearchPage({ params }: SearchPageProps) {
           </div>
         </div>
 
-        {/* {courses.length === 0 ? (
+        {courses.length === 0 ? (
           <div className="text-center py-12">
             <h2 className="text-2xl font-semibold mb-4">No courses found</h2>
             <p className="text-muted-foreground mb-8">
@@ -38,13 +38,13 @@ export default async function SearchPage({ params }: SearchPageProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {courses.map((course) => (
               <CourseCard
-                key={course.}
+                key={course}
                 course={course}
-                href={`/courses/${course.slug}`}
+                href={`/courses/${course}`}
               />
             ))}
           </div>
-        )} */}
+        )}
       </div>
     </div>
   );
